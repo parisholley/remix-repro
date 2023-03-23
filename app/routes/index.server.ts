@@ -1,6 +1,8 @@
-import { IsString } from 'class-validator';
+import type { ActionArgs } from "@remix-run/node";
+import { json, redirect } from "@remix-run/node"
 
-class RandomClass {
-  @IsString()
-  property!: string;
+require('../include.ts');
+
+export async function action({ request }: ActionArgs) {
+	return json({});
 }
